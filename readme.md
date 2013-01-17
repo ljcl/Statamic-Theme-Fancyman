@@ -1,5 +1,7 @@
 #Fancyman
-A free, clean theme for Statamic by Luke C (http://www.lukejclark.com/). Do whatever you want with it.
+A free, clean, responsive theme for Statamic by Luke C (http://www.lukejclark.com/). Do whatever you want with it.
+
+[Have a look at some screenshots here](http://cl.ly/ME20).
 
 Pages default to content from your blog directory. Be sure to check out the `_globals.yaml` file as an example for your global file.
 
