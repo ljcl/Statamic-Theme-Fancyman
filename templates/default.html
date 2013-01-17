@@ -7,7 +7,7 @@
 	</section>
 {{ endif }}
 <div id="content">
-	{{ entries:listing folder="blog" limit="4" }}
+	{{ entries:listing folder="blog" taxonomy="yes" limit="4" }}
 	 <article>
 		{{ if no_results }}
 			<h3>{{ no_results_text }}</h3>
