@@ -1,0 +1,38 @@
+<footer>
+	<div class="footer_content big cf">
+	<ul class="columns">
+		<li class="col">
+			<h2>Navigate</h2>
+			<ul>
+			{{ nav from="/" max_depth="1" }}
+			<li><a href="{{ url }}">{{ title }}</a></li>
+			{{ /nav }}
+			</ul>
+		</li>
+		<li class="col">
+			<h2>Categories</h2>
+			<ul>
+				{{ taxonomy:listing folder="blog" type="categories" }}
+				  {{ if no_results }}
+				    <li>{{ no_results_text }}</li>
+				  {{ else }}
+				    <li><a href="{{ url }}">{{ name }} </a></li>
+				  {{ endif }}
+				{{ /taxonomy:listing }}
+			</ul>
+		</li>
+		<li class="col">
+			<h2>Friends</h2>
+			<ul>
+			{{ footer_links }}
+			<li><a href="{{ link }}">{{ name }}</a></li>
+			{{ /footer_links }}
+			</ul>
+		</li>
+	</ul>
+	</div>
+	<div class="footer_content smt">
+	<p class="copyright">Copyright &copy; 2013. All rights reserved.</p>
+	<p class="theme">Powered by <a href="http://www.statamic.com/" target="blank">Statamic</a>. Theme by <a href="http://www.lukejclark.com/" target="blank">Luke</a> (<a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC</a>).</p>
+	</div>
+</footer>

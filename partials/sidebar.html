@@ -1,0 +1,37 @@
+<aside class="meta">
+	<div>
+		{{ if about }}<h2>About</h2>
+		<p>{{ about}}</p>{{ endif }}
+		{{ if share === on}}
+		<div id="social_meta">
+			{{ social }}
+				<a href="{{ link }}" /><i class="icon-{{icon}}"></i></a>
+			{{ /social }}
+		</div>
+		{{ endif }}
+	</div>
+	<div>
+		<h2>Categories</h2>
+		<ul>
+		{{ taxonomy:listing folder="blog" type="categories" }}
+		  {{ if no_results }}
+			<li>{{ no_results_text }}</li>
+		  {{ else }}
+			<li><a href="{{ url }}">{{ name }} </a><span class="count">({{ results }})</span></li>
+		  {{ endif }}
+		{{ /taxonomy:listing }}
+		</ul>
+	</div>
+	<div>
+		<h2>Tags</h2>
+		<ul>
+		{{ taxonomy:listing folder="blog" type="tags" }}
+			{{ if no_results }}
+				<li>{{ no_results_text }}</li>
+			{{ else }}
+				<li><a href="{{ url }}">{{ name }} </a><span class="count">({{ results }})</span></li>
+			{{ endif }}
+		{{ /taxonomy:listing }}
+		</ul>
+	</div>
+</aside>

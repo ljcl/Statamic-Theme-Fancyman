@@ -1,0 +1,21 @@
+{{ if page_url != "/" }}
+	<section id="pagetitle" class="wrapblock">
+		<h1 id="h_sub">{{ segment_1|deslugify|title }}</h1>
+		<ul id="s_sub">{{ if segment_1}}{{ nav }}<li><a href="{{url}}">{{title}}</a></li>{{ /nav }}{{ endif }}
+			{{if segment_2 || segment_3}}{{ nav:breadcrumbs include_home="no" }}<li class="crumb"><a href="{{ url }}" class="crumbs{{if is_current }} current{{ endif }}">{{ title }}</a></li>{{ /nav:breadcrumbs }}{{ endif }}
+		</ul>
+	</section>
+{{ endif }}
+<div id="content">
+	{{ theme:partial src="post" }}
+	     <article>
+	      {{ if titleimg }}<a class="titleimg" href="{{ url }}"><img src="{{titleimg}}" width="100%" /></a>{{ endif }}
+	        <h1 class="title"><a href="{{ url }}">{{ title|widont }}</a></h1>
+	          <div class="post_actual full">
+	          {{ content|widont }}
+	        </div>
+	      </article>
+	{{ if disqus_shortname }}
+	  {{ disqus:comments account="{{ disqus_shortname }}" }}
+	{{ endif }}
+</div>

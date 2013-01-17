@@ -1,0 +1,18 @@
+<header>
+	<div id="logotop"><h1 class="thetitle cf"><a href="{{ homepage }}">{{ _site_name }}</a></h1><span class="good_day">{{global_byline}}</span><div id="hamburger"></div></div>
+	<nav>
+		<ul class="menu">
+		  <li><a href="{{ homepage }}" {{if page_url == "/" }} class="current" {{ endif }}>Home</a></li>{{ nav from="/" max_depth="2" }}<li{{ if children }} class="hassub"{{ endif }}><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }}</a>
+		  {{if children }}
+			  <ul class="sub-menu">
+			  {{ children }}
+				<li>
+				  <a href="{{ url }}" {{ if is_current }} class="current"{{ endif }}>{{ title }}</a>
+				</li>
+			  {{ /children }}
+			  </ul>
+		   {{ endif }}
+		  </li>{{ /nav }}
+		</ul>
+	</nav>
+</header>

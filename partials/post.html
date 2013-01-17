@@ -1,0 +1,14 @@
+<aside id="full_meta">
+	<div id="entry_meta">
+		<time datetime pubdate>
+			<span class="month">{{ datestamp format="M" }}</span>
+			<span class="day">{{ datestamp format="d" }}</span>
+			<span class="year">{{ datestamp format="Y" }}</span>
+		</time>
+		<div class="detail">
+			<span id="author"><em>by</em> {{author}}</span>
+			{{if categories}}<span class="tags"><em>in </em>{{categories_url_list}} </span>{{endif}}
+			{{if tags}}<span class="tags"><em>tagged </em>{{tags_url_list}}</span>{{endif}}
+		</div>
+	</div>
+</aside>

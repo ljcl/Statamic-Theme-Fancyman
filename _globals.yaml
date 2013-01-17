@@ -1,0 +1,56 @@
+###########################################################################################
+#  GLOBAL VARIABLES    (/_config/globals.yaml)
+###########################################################################################
+
+# If you want to change the default 'blog' page source, have a look-see @
+# partials/structure/footer.html
+# partials/sidebar.html
+# templates/default.html
+
+# Example fields
+no_results_text: "Sorry, no results found!"
+footer_links:
+  -
+    name: Statamic
+    link: http://www.statamic.com
+  -
+    name: Luke Clark 
+    link: http://www.lukejclark.com
+  -
+    name: Dribbble
+    link: http://dribbble.com
+  -
+    name: Website Title
+    link: http://website.not.com
+
+# To load Disqus comments on posts, uncomment and add your disqus shortname below.
+# disqus_shortname: myshortnameshouldbehere
+
+# Appears next to the site name
+global_byline: Only the fanciest for us
+
+#Display about text on sidebar?
+about: Direct trade typewriter Austin, synth post-ironic wolf retro pitchfork pinterest before they sold out biodiesel sriracha bicycle rights. Messenger bag post-ironic williamsburg, selvage bushwick aesthetic pickled Austin cosby sweater chambray leggings.
+
+# Shows icons for social connections on the sidebar.
+# Requires a 'link' to your social page and 'icon' name for each entry.
+# Icon names (facebook, twitter, github-alt, linkedin, pinterest, google-plus, envelope).
+social: 
+  -
+    link: http://www.google.com
+    icon: linkedin
+  -
+    link: http://www.google.com
+    icon: twitter
+  -
+    link: http://www.google.com
+    icon: facebook
+  -
+    link: http://www.google.com
+    icon: github-alt
+  -
+    link: http://www.google.com
+    icon: pinterest
+  -
+    link: http://www.google.com
+    icon: google-plus

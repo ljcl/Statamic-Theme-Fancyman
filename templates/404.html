@@ -1,0 +1,9 @@
+<section id="pagetitle" class="wrapblock">
+	<h1 id="h_sub">404</h1>
+	<ul id="s_sub">{{ if segment_1}}{{ nav }}<li><a href="{{url}}">{{title}}</a></li>{{ /nav }}{{ endif }}
+		{{if segment_2 || segment_3}}{{ nav:breadcrumbs include_home="no" }}<li><a href="{{ url }}" class="crumbs{{if is_current }} current{{ endif }}">{{ title }}</a></li>{{ /nav:breadcrumbs }}{{ endif }}
+	</ul>
+</section>
+<div id="content">
+	<p>They don't think it be like it is, but it do.</p>
+</div>
