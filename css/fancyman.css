@@ -272,6 +272,7 @@ ul#s_sub li:last-child a.crumbs { background:none; padding-left: 8px;}
 	position: relative;
 	width: 620px;
 	margin: 0 0 30px 0;
+	min-height: 500px;
 	background: #FFF;
 	box-shadow: 0px 0px 2px #e7e7e7;
 }
