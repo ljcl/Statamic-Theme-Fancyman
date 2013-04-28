@@ -14,3 +14,7 @@ Pages default to content from your blog directory. Be sure to check out the `_gl
 Junction, [The League of Movable Type](www.theleagueofmoveabletype.com/)
 
 [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+
+
+## A Note
+This theme is not guaranteed for compliance in ancient browsers. 
