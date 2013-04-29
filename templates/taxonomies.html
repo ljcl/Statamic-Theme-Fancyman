@@ -1,0 +1,30 @@
+{{ if taxonomy_slug }}
+  <section id="pagetitle" class="wrapblock">
+    <h1 id="h_sub">Sorting: {{ taxonomy_slug }}</h1>
+  </section>
+{{ endif }}
+<div id="content">
+  {{ entries:listing folder="blog" limit="10" taxonomy="true" }}
+   <article>
+    {{ if no_results }}
+      <h3>{{ no_results_text }}</h3>
+    {{ else }}
+    {{ if titleimg }}<a class="titleimg" href="{{ url }}"><img src="{{titleimg}}" width="620" /></a>{{ endif }}
+      <h1 class="title"><a href="{{ url }}">{{ title }}</a></h1>
+        <div class="post_meta">
+          <p>{{ datestamp format="F jS, Y" }}<br> in {{categories_url_list}}<br> by <a href="#">{{author}}</a></p>
+        </div>
+        <div class="post_actual">
+        {{ content }}
+        {{ if tags }}<p class="post_tagged"> Tagged as {{ tags_url_list }}</p>{{ endif }}</p>
+      </div>
+    {{ endif }}
+    </article>
+  {{/entries:listing}}
+  {{ entries:pagination folder="blog" limit="10" taxonomy="true" }}
+    <div id="paging">
+      <a {{ if previous_page }}href="{{ previous_page }}" class="nav-prev{{else}} class="nav-prev disabled{{ endif }}">&larr;</a>{{ if total_pages > 1}}<div class="current"><strong>{{ current_page }}</strong>&nbsp;&nbsp;<span class="script">of</span>&nbsp;&nbsp;<strong>{{total_pages}}</strong></div>{{ endif }}<a {{ if next_page }}href="{{ next_page }}" class="nav-next{{else}} class="nav-next disabled{{ endif }}">&rarr;</a>
+    </div>
+  {{ /entries:pagination }}
+  {{ theme:partial src="sidebar" }}
+</div>

@@ -3,7 +3,7 @@
 	by Luke Clark (@lukejclark)
 	http://www.lukejclark.com/
 	--
-	Hey, do whatever you want with this. Feel free to take me out of the footer if you want too.
+	Hey, do whatever you want with this. Feel free to take me out of the footer if you want to.
 	http://creativecommons.org/publicdomain/zero/1.0/
 	--
 	It'd be nice if you let me know what do you with it though!
@@ -199,6 +199,7 @@ nav ul.menu > li > a {
 	display: block;
 	position: relative;
 	top: 1px;
+	border-bottom: 1px solid transparent;
 }
 nav ul.menu > li:first-of-type > a {border-left:none;}
 nav ul.menu > li:last-of-type > a {border-right:none;}
