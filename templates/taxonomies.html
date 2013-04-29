@@ -4,7 +4,7 @@
   </section>
 {{ endif }}
 <div id="content">
-  {{ entries:listing folder="blog" limit="10" taxonomy="true" }}
+  {{ entries:listing folder="blog" limit="10" taxonomy="yes" }}
    <article>
     {{ if no_results }}
       <h3>{{ no_results_text }}</h3>
@@ -21,7 +21,7 @@
     {{ endif }}
     </article>
   {{/entries:listing}}
-  {{ entries:pagination folder="blog" limit="10" taxonomy="true" }}
+  {{ entries:pagination folder="blog" limit="10" taxonomy="yes" }}
     <div id="paging">
       <a {{ if previous_page }}href="{{ previous_page }}" class="nav-prev{{else}} class="nav-prev disabled{{ endif }}">&larr;</a>{{ if total_pages > 1}}<div class="current"><strong>{{ current_page }}</strong>&nbsp;&nbsp;<span class="script">of</span>&nbsp;&nbsp;<strong>{{total_pages}}</strong></div>{{ endif }}<a {{ if next_page }}href="{{ next_page }}" class="nav-next{{else}} class="nav-next disabled{{ endif }}">&rarr;</a>
     </div>
